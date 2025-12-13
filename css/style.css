@@ -130,6 +130,13 @@ ul {
     height: 24px;
 }
 
+/* Social Links Container */
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
 .linkedin-link {
     display: flex;
     align-items: center;
