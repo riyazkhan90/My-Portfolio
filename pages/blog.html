@@ -75,72 +75,9 @@
                         LinkedIn.</p>
                 </div>
 
-                <!-- Blog Cards Grid -->
-                <div class="blog-grid">
-
-                    <!-- Placeholder Card 1 -->
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="blog-card">
-                        <div class="blog-card-badge">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                            </svg>
-                            LinkedIn Article
-                        </div>
-                        <div class="blog-card-content">
-                            <span class="blog-card-date">Coming Soon</span>
-                            <h3 class="blog-card-title">Article Title Goes Here</h3>
-                            <p class="blog-card-excerpt">A brief description of the article will appear here. Stay tuned
-                                for insights on AI, product strategy, and more.</p>
-                        </div>
-                        <div class="blog-card-footer">
-                            <span class="blog-card-read">Read on LinkedIn →</span>
-                        </div>
-                    </a>
-
-                    <!-- Placeholder Card 2 -->
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="blog-card">
-                        <div class="blog-card-badge">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                            </svg>
-                            LinkedIn Article
-                        </div>
-                        <div class="blog-card-content">
-                            <span class="blog-card-date">Coming Soon</span>
-                            <h3 class="blog-card-title">Article Title Goes Here</h3>
-                            <p class="blog-card-excerpt">A brief description of the article will appear here. Stay tuned
-                                for insights on AI, product strategy, and more.</p>
-                        </div>
-                        <div class="blog-card-footer">
-                            <span class="blog-card-read">Read on LinkedIn →</span>
-                        </div>
-                    </a>
-
-                    <!-- Placeholder Card 3 -->
-                    <a href="#" target="_blank" rel="noopener noreferrer" class="blog-card">
-                        <div class="blog-card-badge">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                            </svg>
-                            LinkedIn Article
-                        </div>
-                        <div class="blog-card-content">
-                            <span class="blog-card-date">Coming Soon</span>
-                            <h3 class="blog-card-title">Article Title Goes Here</h3>
-                            <p class="blog-card-excerpt">A brief description of the article will appear here. Stay tuned
-                                for insights on AI, product strategy, and more.</p>
-                        </div>
-                        <div class="blog-card-footer">
-                            <span class="blog-card-read">Read on LinkedIn →</span>
-                        </div>
-                    </a>
-
+                <!-- Blog Cards Grid (loaded dynamically from Firestore) -->
+                <div id="blog-grid" class="blog-grid">
+                    <!-- Blog posts are loaded dynamically by blog.js -->
                 </div>
 
                 <!-- CTA to LinkedIn -->
@@ -154,6 +91,20 @@
                                 d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                         </svg>
                         Follow on LinkedIn
+                    </a>
+                </div>
+
+                <!-- Admin Link (subtle) -->
+                <div class="blog-admin-link">
+                    <a href="admin.html" title="Admin">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path
+                                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                            </path>
+                        </svg>
+                        Manage
                     </a>
                 </div>
 
@@ -177,6 +128,14 @@
     </footer>
 
     <script src="../js/script.js"></script>
+
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+
+    <!-- Firebase Config & Blog Logic -->
+    <script src="../js/firebase-config.js"></script>
+    <script src="../js/blog.js"></script>
 </body>
 
 </html>

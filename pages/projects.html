@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Coming Soon | Riyaz Khan</title>
-    <meta name="description" content="Projects page coming soon - Riyaz Khan, Senior AI Product Manager.">
+    <title>Projects | Riyaz Khan - Senior AI Product Manager</title>
+    <meta name="description"
+        content="Showcase of AI, ML, generative AI, predictive models, and data platform projects led by Riyaz Khan.">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -64,18 +65,86 @@
     </nav>
 
     <main>
-        <!-- Coming Soon Section -->
-        <section class="coming-soon-section">
+        <!-- Projects Section -->
+        <section class="projects-section site-header-spacing">
             <div class="container">
-                <div class="coming-soon-content">
-                    <img src="../assets/images/coming-soon.png" alt="Coming Soon" class="coming-soon-graphic">
-                    <h1 class="coming-soon-title">Projects Coming Soon</h1>
-                    <p class="coming-soon-text">I'm currently working on showcasing my exciting projects. Check back
-                        soon to see what I've been building!</p>
-                    <a href="../index.html" class="back-home-btn">Back to Home</a>
+                <div class="section-header">
+                    <span class="super-heading">My Portfolio</span>
+                    <h1 class="section-title">Projects</h1>
+                    <p class="section-subtitle">AI/ML initiatives, predictive models, and customer experience solutions I've led and deployed.</p>
+                </div>
+
+                <!-- Filter Bar -->
+                <div class="projects-filter-bar" id="filter-bar">
+                    <button class="filter-btn active" data-category="all">All Projects</button>
+                    <button class="filter-btn" data-category="generative ai">Generative AI</button>
+                </div>
+
+                <!-- Projects Grid (loaded dynamically) -->
+                <div id="projects-grid" class="projects-grid">
+                    <!-- Loaded dynamically from Firestore or fallback -->
+                </div>
+
+                <!-- Subtle Admin Link -->
+                <div class="blog-admin-link">
+                    <a href="admin.html" title="Admin">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path
+                                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                            </path>
+                        </svg>
+                        Manage
+                    </a>
                 </div>
             </div>
         </section>
+
+        <!-- Case Study Modal -->
+        <div id="project-modal" class="project-modal">
+            <div class="project-modal-container">
+                <button id="modal-close" class="project-modal-close" aria-label="Close modal">&times;</button>
+                <div class="project-modal-hero">
+                    <div class="modal-header-meta">
+                        <span id="modal-category" class="project-category-tag">Category</span>
+                        <span id="modal-metric" class="project-metric-badge">Metric</span>
+                    </div>
+                    <h2 id="modal-title" class="project-modal-title">Project Title</h2>
+                    <div id="modal-role" class="project-modal-role">Your Role</div>
+                </div>
+                <div class="project-modal-grid">
+                    <div class="modal-content-left">
+                        <div class="modal-section">
+                            <h4>Overview</h4>
+                            <p id="modal-overview">Project overview will be loaded here...</p>
+                        </div>
+                        <div class="modal-section">
+                            <h4>Detailed Case Study</h4>
+                            <p id="modal-detail">Detailed case study content will be loaded here...</p>
+                        </div>
+                    </div>
+                    <div class="modal-content-right">
+                        <div class="modal-info-block">
+                            <span>Timeline</span>
+                            <span id="modal-date">Date range</span>
+                        </div>
+                        <div class="modal-info-block">
+                            <span>Tech Stack & Skills</span>
+                            <div id="modal-tech" class="tech-wrap">
+                                <!-- Tags loaded dynamically -->
+                            </div>
+                        </div>
+                        <a id="modal-link" href="#" target="_blank" rel="noopener noreferrer" class="modal-cta-btn">
+                            View Live Project ↗
+                        </a>
+                        <a id="modal-demo-link" href="#" target="_blank" rel="noopener noreferrer" class="modal-cta-btn demo-btn" style="display: none;">
+                            View Demo ↗
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer class="footer">
@@ -94,6 +163,14 @@
     </footer>
 
     <script src="../js/script.js"></script>
+
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+
+    <!-- Firebase Config & Projects Logic -->
+    <script src="../js/firebase-config.js"></script>
+    <script src="../js/projects.js"></script>
 </body>
 
 </html>
