@@ -52,34 +52,8 @@ async function initProjects() {
             <p>Loading projects...</p>
         </div>`;
 
-    // Check if Firebase is configured with real credentials
-    const isFirebaseConfigured = typeof firebaseConfig !== 'undefined' && 
-                                 firebaseConfig.apiKey && 
-                                 firebaseConfig.apiKey !== "YOUR_API_KEY";
-
-    if (isFirebaseConfigured) {
-        try {
-            const snapshot = await db.collection('projects')
-                .orderBy('date', 'desc')
-                .get();
-
-            if (!snapshot.empty) {
-                allProjects = [];
-                snapshot.forEach(doc => {
-                    allProjects.push({ id: doc.id, ...doc.data() });
-                });
-            } else {
-                console.log("Firestore projects collection is empty, loading fallback projects.");
-                allProjects = [...fallbackProjects];
-            }
-        } catch (error) {
-            console.error("Error loading projects from Firestore:", error);
-            allProjects = [...fallbackProjects];
-        }
-    } else {
-        console.log("Firebase is not configured, loading local fallback projects.");
-        allProjects = [...fallbackProjects];
-    }
+    // Force loading local projects instead of outdated Firestore data
+    allProjects = [...fallbackProjects];
 
     renderProjects();
     setupFilters();
