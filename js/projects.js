@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const fallbackProjects = [
     {
         id: "auto-concierge",
-        title: "Autocare Concierge (Auto Concierge)",
+        title: "Auto Concierge",
         category: "generative ai",
         role: "Lead AI Engineer & Architect",
         metric: "Multi-Agent System",
